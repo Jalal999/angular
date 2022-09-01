@@ -1,9 +1,9 @@
 <div class="product-list" *ngFor="let product of rendering.fields.products">
-    <div class="product-list__book" [routerLink]="['/product', product.fields.id.value]">
-      <img *scImage="product.fields.image; attrs: srcSetImageAttributes" class="product-list__book-img" />
-      <div class="product-list__book__heading">
-        <p *scText="product.fields.title"></p>
-        <p *scText="product.fields.price">$</p>
-      </div>
+  <div class="product-list__book" [routerLink]="['/product', product.fields.id.value]">
+    <img *scImage="product.fields.image; attrs: srcSetImageAttributes" class="product-list__book-img" />
+    <div class="product-list__book__heading">
+      <p *scText="product.fields.title"></p>
+      <p *scText="product.fields.price">$</p>
     </div>
+  </div>
 </div>
