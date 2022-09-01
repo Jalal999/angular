@@ -1,0 +1,25 @@
+.product-list {
+    padding: 20px;
+}
+
+.product-list__book {
+    padding: 15px;
+    border-radius: 5px;
+    background-color:rgba(239, 243, 247, 0.982)
+}
+
+.product-list__book-img {
+    width: 100%;
+}
+
+.product-list__book__heading {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-list__book__heading p {
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,53 @@
+.product-details {
+    text-align: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-details__book {
+    text-align: center;
+}
+
+
+.product-details__book-title {
+    display: block;
+    font-size: 18px;
+}
+
+.product-details__book-desc {
+    font-size: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#bookAmount {
+    width: 50px;
+}
+
+.product_details__book_amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.product_details__book_amount input::-webkit-inner-spin-button {
+    width: 15px;
+    height: 20px;
+    opacity: 1;
+}
+
+.product_details__addBtn {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    color: aliceblue;
+    background-color: #2644da;
+    display: flex;
+    justify-content: space-around;
+}

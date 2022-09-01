@@ -1,0 +1,10 @@
+id: product-item-2
+displayName: First Product
+fields:
+  id: 2
+  title: Java
+  image:
+    src: data/media/img/book_image_3.jpg
+    alt: Java book
+  price: 20
+  description: Java is one of the famouse programming languages
