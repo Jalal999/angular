@@ -18,3 +18,4 @@ export default function productList(manifest: Manifest) {
       ],
   });
 }
+

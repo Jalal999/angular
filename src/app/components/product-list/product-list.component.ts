@@ -7,5 +7,7 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+
   @Input() rendering: ComponentRendering;
+  
 }
