@@ -10,6 +10,13 @@ fields:
 placeholders:
   jss-main:
     - componentName: Navbar
+      fields:
+        imgCart:
+          src: data/media/img/shopping-cart-icon.svg
+          alt: Shopping Cart Icon
+        imgBar:
+          src: data/media/img/haburger-icon.svg
+          alt: Hamburger icon
     - componentName: ProductList
       fields:
         products:

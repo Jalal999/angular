@@ -7,7 +7,6 @@ import { JssRouteResolver } from './jss-route-resolver.service';
 import { JssRouteBuilderService } from './jss-route-builder.service';
 import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
 import { BrowserModule } from '@angular/platform-browser';
-import { NavigationComponent } from './navigation/navigation.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { VisitorIdentificationComponent } from './visitor-identification/visitor-identification.component';
 import { ProductDetailsComponent } from '../components/product-details/product-details.component';
@@ -63,7 +62,6 @@ const routes: Routes = [
     NotFoundComponent,
     ServerErrorComponent,
     LayoutComponent,
-    NavigationComponent,
     VisitorIdentificationComponent,
     ProductDetailsComponent
   ],

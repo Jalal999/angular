@@ -9,7 +9,8 @@ export default function navbar(manifest: Manifest) {
     name: 'Navbar',
     icon: SitecoreIcon.DocumentTag,
     fields: [
-      { name: 'heading', type: CommonFieldTypes.SingleLineText },
+      { name: 'imgCart', type: CommonFieldTypes.Image },
+      { name: 'imgBar', type: CommonFieldTypes.Image },
     ],
   });
 }

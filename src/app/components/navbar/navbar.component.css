@@ -2,16 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid;
 }
 
 .nav-bar h3 {
     padding: 0 5px;
+    margin: 5px 0;
 }
 
 .nav-bar__logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 5px;
 }
 
 .nav-bar__logo button {
@@ -29,9 +32,11 @@
 .nav-bar__icons__cart {
     margin: 0 5px;
     cursor: pointer;
+    width: 15px;
 }
 
 .nav-bar__icons__hamburger {
     margin: 0 10x;
     cursor: pointer;
+    width: 15px;
 }

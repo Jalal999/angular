@@ -14,6 +14,8 @@ import { GraphQLModule } from './jss-graphql.module';
 import { JssDataFetcherService } from './jss-data-fetcher.service';
 import { JssMetaService } from './jss-meta.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     }),
     AppComponentsModule,
     NoopAnimationsModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [
     JssContextService,
@@ -43,7 +47,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     { provide: APP_BASE_HREF, useValue: '/' },
   ],
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   bootstrap: [
     AppComponent

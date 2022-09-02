@@ -1,18 +1,24 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
+// import { Router } from '@angular/router';
+// import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   @Input() rendering: ComponentRendering;
+  public logoName = 'BookStore'
 
-  constructor() { }
+  // constructor(private link: Router, private path: Location ) { }
 
-  ngOnInit() {
-    // remove this after implementation is done
-    console.log('navbar component initialized with component data', this.rendering);
-  }
+  // public isOnHomepage(): boolean {
+  //   return this.link.url === '/' || this.link.url === '' ? true : false;
+  // }
+
+  // public goBack() {
+  //   this.path.back()
+  // }
 }

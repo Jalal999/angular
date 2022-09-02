@@ -1,15 +1,11 @@
-<div class="nav-bar">
-  <div class="nav-bar__logo">
-      <!-- <button *ngIf="!isOnHomepage()" (click)="goBack()">
-          <mat-icon>arrow_back</mat-icon>
-      </button> -->
-      <h3 routerLink="">BookStore</h3>
-  </div>
-  <div class="nav-bar__icons">
-      <!-- <mat-icon class="nav-bar__icons__cart" mat-raised-button matBadgeOverlap="false" routerLink="/cart">
-          shopping_cart</mat-icon> -->
-          <h5>cart</h5>
-      <!-- <mat-icon class="nav-bar__icons__hamburger">reorder</mat-icon> -->
-      <h5>menu</h5>
-  </div>
-</div>
+<mat-toolbar class="nav-bar">
+    <div class="nav-bar__logo">
+        <h3 routerLink="">{{ logoName }}</h3>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+
+    </div>
+    <div class="nav-bar__icons">
+        <img *scImage="rendering.fields.imgCart; attrs: srcSetImageAttributes" class="nav-bar__icons__cart" routerLink="/cart" />
+        <img *scImage="rendering.fields.imgBar; attrs: srcSetImageAttributes" class="nav-bar__icons__hamburger" />
+    </div>
+</mat-toolbar>
