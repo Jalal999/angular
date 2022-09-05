@@ -40,3 +40,7 @@
     cursor: pointer;
     width: 15px;
 }
+
+.nav-bar__icons__arrow {
+    width: 15px;
+}

@@ -11,6 +11,7 @@ export default function navbar(manifest: Manifest) {
     fields: [
       { name: 'imgCart', type: CommonFieldTypes.Image },
       { name: 'imgBar', type: CommonFieldTypes.Image },
+      { name: 'backArrow', type: CommonFieldTypes.Image },
     ],
   });
 }

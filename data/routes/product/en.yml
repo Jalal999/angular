@@ -20,7 +20,7 @@ fields:
 # root placeholder names are defined in the package.json config section (required for Sitecore deployment)
 placeholders:
   jss-main:
-   - componentName: Navbar
+    - componentName: Navbar
       fields:
         imgCart:
           src: data/media/img/shopping-cart-icon.svg
@@ -28,6 +28,9 @@ placeholders:
         imgBar:
           src: data/media/img/haburger-icon.svg
           alt: Hamburger icon
+        backArrow:
+          src: data/media/img/back-arrow.svg
+          alt: Back arrow icon
     - componentName: ProductDetails
       fields:
         title: React.js book

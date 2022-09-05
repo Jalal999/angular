@@ -17,6 +17,9 @@ placeholders:
         imgBar:
           src: data/media/img/haburger-icon.svg
           alt: Hamburger icon
+        backArrow:
+          src: data/media/img/back-arrow.svg
+          alt: Back arrow icon
     - componentName: ProductList
       fields:
         products:
