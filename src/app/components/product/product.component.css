@@ -9,6 +9,9 @@
     text-align: center;
 }
 
+.product-details__book img {
+    width: 100%;
+}
 
 .product-details__book-title {
     display: block;
@@ -21,18 +24,7 @@
     align-items: center;
 }
 
-
-.product-details__book-img {
-    width: 300px;
-}
-
-
-
-#bookAmount {
-    width: 50px;
-}
-
-.product_details__book_amount {
+.product_details__book-amount {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +33,11 @@
     width: 100%;
 }
 
-.product_details__book_amount input::-webkit-inner-spin-button {
+.product_details__book-amount input {
+    width: 75px;
+}
+
+.product_details__book-amount input::-webkit-inner-spin-button {
     width: 15px;
     height: 20px;
     opacity: 1;
@@ -49,11 +45,12 @@
 
 .product_details__addBtn {
     width: 100%;
-    border: none;
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
-    color: aliceblue;
     background-color: #2644da;
+    color: aliceblue;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
 }

@@ -19,9 +19,8 @@ placeholders:
         backArrow:
           src: data/media/img/back-arrow.svg
           alt: Back arrow icon
-    - componentName: ProductDetails
+    - componentName: Product
       fields:
-        title: React.js
-        image:
+        title: fdsfsdf
+        image: 
           src: data/media/img/book_image_2.jpg
-          alt: React.js book

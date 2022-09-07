@@ -9,7 +9,7 @@ import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
 import { VisitorIdentificationComponent } from './visitor-identification/visitor-identification.component';
-import { ProductDetailsComponent } from '../components/product-details/product-details.component';
+// import { ProductDetailsComponent } from '../components/product-details/product-details.component';
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function jssRouteMatcher(url: UrlSegment[]): UrlMatchResult {
@@ -35,7 +35,7 @@ export function jssRouteMatcher(url: UrlSegment[]): UrlMatchResult {
 const routes: Routes = [
   { path: 'NotFound', component: NotFoundComponent },
   { path: 'ServerError', component: ServerErrorComponent },
-  { path: 'product/:id', component: ProductDetailsComponent },
+  // { path: 'product/:id', component: ProductDetailsComponent },
   {
     // matcher is effectively a catch-all route
     matcher: jssRouteMatcher,
@@ -63,7 +63,7 @@ const routes: Routes = [
     ServerErrorComponent,
     LayoutComponent,
     VisitorIdentificationComponent,
-    ProductDetailsComponent
+    // ProductDetailsComponent
   ],
   providers: [
     JssRouteResolver,

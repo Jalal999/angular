@@ -1,0 +1,14 @@
+<div class="product-details">
+  <div class="product-details__book">
+    <div *scRichText="rendering.fields.title" class="product-details__book-title"></div>
+    <img *scImage="rendering.fields.image; attrs: srcSetImageAttributes" class="product-details__book-img" />
+    <div class="product-details__book__heading">
+      <p *scRichText="rendering.fields.desc" class="product_details__book-desc"></p>
+      <div class="product_details__book-amount">
+        <label for="product">Amount: </label>
+        <input type="number" placeholder="0" />
+      </div>
+    </div>
+  </div>
+  <button class="product_details__addBtn" type="button">Add to Cart</button>
+</div>
