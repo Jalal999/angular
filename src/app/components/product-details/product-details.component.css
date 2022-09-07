@@ -22,6 +22,12 @@
 }
 
 
+.product-details__book-img {
+    width: 300px;
+}
+
+
+
 #bookAmount {
     width: 50px;
 }

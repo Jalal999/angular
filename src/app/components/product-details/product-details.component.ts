@@ -8,4 +8,6 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 })
 export class ProductDetailsComponent {
   @Input() rendering: ComponentRendering;
+
+  constructor() { }
 }
