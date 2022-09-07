@@ -1,0 +1,13 @@
+<mat-toolbar class="nav-bar">
+    <div class="nav-bar__logo">
+        <button *ngIf="routePath !== '/'" (click)="goBack()">
+            <img *scImage="rendering.fields.backArrow; attrs: srcSetImageAttributes" class="nav-bar__icons__arrow" />
+        </button>
+        <h3 routerLink="">{{ logoName }}</h3>
+    </div>
+    <div class="nav-bar__icons">
+        <img *scImage="rendering.fields.imgCart; attrs: srcSetImageAttributes" class="nav-bar__icons__cart"
+            routerLink="/cart" />
+        <img *scImage="rendering.fields.imgBar; attrs: srcSetImageAttributes" class="nav-bar__icons__hamburger" />
+    </div>
+</mat-toolbar>
