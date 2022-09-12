@@ -21,9 +21,9 @@ placeholders:
           alt: Back arrow icon
     - componentName: Product
       fields:
-        title: Java
+        title: React
         image: 
-          src: data/media/img/book_image_2.jpg
-          alt: Java Book
-        desc: Java is one of the most useful programming languages.
+          src: data/media/img/book_image_3.jpg
+          alt: React.js Book
+        desc: React.js is one of the most powerfull frameworks of JavaScript.
         amount: 0

@@ -54,3 +54,23 @@
     display: flex;
     justify-content: space-around;
 }
+
+.dialog {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: #cdcccc;
+}
+
+.dialog button {
+    background-color: #2644da;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+}

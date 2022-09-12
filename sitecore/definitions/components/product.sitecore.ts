@@ -12,6 +12,7 @@ export default function product(manifest: Manifest) {
       { name: 'title', type: CommonFieldTypes.SingleLineText },
       { name: 'image', type: CommonFieldTypes.Image },
       { name: 'desc', type: CommonFieldTypes.MultiLineText },
+      { name: 'amount', type: CommonFieldTypes.SingleLineText },
 
     ],
   });

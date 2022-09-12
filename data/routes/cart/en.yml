@@ -19,11 +19,6 @@ placeholders:
         backArrow:
           src: data/media/img/back-arrow.svg
           alt: Back arrow icon
-    - componentName: Product
+    - componentName: Cart
       fields:
-        title: Java
-        image: 
-          src: data/media/img/book_image_2.jpg
-          alt: Java Book
-        desc: Java is one of the most useful programming languages.
-        amount: 0
+        heading: 'cart item'
