@@ -4,7 +4,7 @@ export interface CartItemType {
   productId: number,
   productName: string,
   productPrice: number, 
-  productDesc: string,
+  productDescription: string,
   productImg?: string,
   productCount: number
 }
@@ -43,7 +43,7 @@ export class CartService {
         productId: product.id,
         productName: product.name,
         productPrice: product.price,
-        productDesc: product.description!,
+        productDescription: product.description!,
         productImg: product.imgPath,
         productCount: product.amount
       });
