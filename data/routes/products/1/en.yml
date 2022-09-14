@@ -25,5 +25,5 @@ placeholders:
         image: 
           src: data/media/img/book_image_2.jpg
           alt: Java Book
-        desc: Java is one of the most useful programming languages.
+        description: Java is one of the most useful programming languages.
         amount: 0

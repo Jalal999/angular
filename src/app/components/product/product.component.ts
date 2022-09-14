@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
-import { FormControl } from '@angular/forms';
 import { CartService } from '../../services/cart/cart.service';
 
 export interface Product {
@@ -19,8 +18,6 @@ export interface Product {
 })
 export class ProductComponent {
   @Input() rendering: ComponentRendering;
-  @Input() formControl: FormControl;
-  // public amount = new FormControl('')
   public showDialog: boolean = false;
 
   constructor(private cartService: CartService) { }
@@ -28,6 +25,5 @@ export class ProductComponent {
   public addToCart(product: Product): void {
     this.cartService.addToCart(product);
     this.showDialog = true;
-    console.log('worksss')
   }
 }

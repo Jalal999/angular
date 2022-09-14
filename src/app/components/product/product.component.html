@@ -7,12 +7,12 @@
     <div *scRichText="rendering.fields.title" class="product-details__book-title"></div>
     <img *scImage="rendering.fields.image; attrs: srcSetImageAttributes" class="product-details__book-img" />
     <div class="product-details__book__heading">
-      <p *scRichText="rendering.fields.desc" class="product_details__book-desc"></p>
+      <p *scRichText="rendering.fields.description" class="product_details__book-description"></p>
       <div class="product_details__book-amount">
         <label for="amount">Amount: </label>
         <input type="number" placeholder="0" id="amount" [(ngModel)]="rendering.fields.amount"/>
       </div>
     </div>
   </div>
-  <button class="product_details__addBtn" type="submit" (click)="addToCart(rendering.fields)">Add to Cart</button>
+  <button class="product_details__add-button" type="submit" (click)="addToCart(rendering.fields)">Add to Cart</button>
 </div>

@@ -6,7 +6,7 @@ export interface CartItemType {
   productPrice: number, 
   productDesc: string,
   productImg?: string,
-  productCnt: number
+  productCount: number
 }
 
 export interface ProductType {
@@ -32,7 +32,7 @@ export class CartService {
 
     for (let i=0; i < this.cartItems!.length; i++) {
       if (this.cartItems![i].productId === product.id) {
-        this.cartItems![i].productCnt += product.amount;
+        this.cartItems![i].productCount += product.amount;
         productInCart = true;
         break;
       }
@@ -45,7 +45,7 @@ export class CartService {
         productPrice: product.price,
         productDesc: product.description!,
         productImg: product.imgPath,
-        productCnt: product.amount
+        productCount: product.amount
       });
     }
   }
