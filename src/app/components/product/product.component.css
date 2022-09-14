@@ -74,3 +74,8 @@
     font-size: 20px;
     border: none;
 }
+
+.dialog__close-icon {
+    width: 10px !important;
+    float: right;
+}

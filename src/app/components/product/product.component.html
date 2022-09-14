@@ -1,6 +1,7 @@
 <div class="product-details">
   <div class="product-details__book">
     <div class="dialog" *ngIf="showDialog">
+      <img (click)="closeDialog()" class="dialog__close-icon" src="data/media/img/close-icon.svg" />
       <button routerLink="/cart">Go To Cart</button>
       <button routerLink="/">Continue Shopping</button>
     </div>

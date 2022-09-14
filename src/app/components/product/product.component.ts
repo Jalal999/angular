@@ -26,4 +26,8 @@ export class ProductComponent {
     this.cartService.addToCart(product);
     this.showDialog = true;
   }
+
+  public closeDialog(): void {
+    this.showDialog = false;
+  }
 }
