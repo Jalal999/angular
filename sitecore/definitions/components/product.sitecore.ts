@@ -1,17 +1,19 @@
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-dev-tools';
 
 /**
- * Adds the product-details component to the disconnected manifest.
+ * Adds the product component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.ts) when `jss manifest` is run.
  */
-
-export default function productDetails(manifest: Manifest) {
+export default function product(manifest: Manifest) {
   manifest.addComponent({
-    name: 'ProductDetails',
+    name: 'Product',
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'title', type: CommonFieldTypes.SingleLineText },
       { name: 'image', type: CommonFieldTypes.Image },
+      { name: 'description', type: CommonFieldTypes.MultiLineText },
+      { name: 'amount', type: CommonFieldTypes.SingleLineText },
+
     ],
   });
 }

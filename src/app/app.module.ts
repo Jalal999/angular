@@ -14,8 +14,7 @@ import { GraphQLModule } from './jss-graphql.module';
 import { JssDataFetcherService } from './jss-data-fetcher.service';
 import { JssMetaService } from './jss-meta.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -34,8 +33,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     }),
     AppComponentsModule,
     NoopAnimationsModule,
-    MatIconModule,
-    MatToolbarModule
+    ReactiveFormsModule,
   ],
   providers: [
     JssContextService,

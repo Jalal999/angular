@@ -1,0 +1,81 @@
+.product-details {
+    text-align: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-details__book {
+    text-align: center;
+}
+
+.product-details__book img {
+    width: 100%;
+}
+
+.product-details__book-title {
+    display: block;
+    font-size: 18px;
+}
+
+.product-details__book-description {
+    font-size: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product_details__book-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.product_details__book-amount input {
+    width: 75px;
+}
+
+.product_details__book-amount input::-webkit-inner-spin-button {
+    width: 15px;
+    height: 20px;
+    opacity: 1;
+}
+
+.product_details__add-button {
+    width: 100%;
+    background-color: #2644da;
+    color: aliceblue;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dialog {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: #cdcccc;
+}
+
+.dialog button {
+    background-color: #2644da;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+}
+
+.dialog__close-icon {
+    width: 10px !important;
+    float: right;
+}
