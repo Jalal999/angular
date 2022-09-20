@@ -56,6 +56,7 @@ export class CartService {
 
   public deleteItem(id: number): void {
     console.log('woorks')
+    this.cartItems = this.cartItems.filter(item => item.productId !== id)
     this.cartItems!.forEach((element, index) => {
       if(element.productId === id) {
         console.log('check equality')
