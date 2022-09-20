@@ -11,10 +11,10 @@ export interface CartItemType {
 
 export interface ProductType {
   id: number;
-  name: string;
+  title: string;
   price: number;
   description?: string;
-  imgPath?: string;
+  image?: string;
   amount?: number;
 }
 
@@ -41,10 +41,10 @@ export class CartService {
     if (!productInCart) {
       this.cartItems?.push({
         productId: product.id,
-        productName: product.name,
+        productName: product.title,
         productPrice: product.price,
         productDescription: product.description!,
-        productImg: product.imgPath,
+        productImg: product.image,
         productCount: product.amount
       });
     }
@@ -53,4 +53,15 @@ export class CartService {
   public getCartItems(): CartItemType[] {
     return this.cartItems;
   }
+
+  public deleteItem(id: number): void {
+    console.log('woorks')
+    this.cartItems!.forEach((element, index) => {
+      if(element.productId === id) {
+        console.log('check equality')
+        this.cartItems!.splice(index, 1);
+      }
+    }); 
+  }
+
 }

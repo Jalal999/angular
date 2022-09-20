@@ -15,5 +15,16 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
+    console.log(this.cartItems)
+  }
+
+  public isCartNotEmpty(): boolean {
+    return this.cartItems.length > 0 ? true : false
+  }
+
+  public deleteItem(productID: number): void {
+    console.log('worksss')
+    this.cartService.deleteItem(productID.valueOf());
+    this.cartItems = this.cartService.getCartItems();
   }
 }
