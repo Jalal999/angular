@@ -10,12 +10,12 @@ import { CartItemType, CartService } from '../../services/cart/cart.service';
 export class CartComponent implements OnInit {
   @Input() rendering: ComponentRendering;
   public cartItems: CartItemType[];
+  public totalCost = this.cartService.getTotalCost();
 
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
-    console.log(this.cartItems)
   }
 
   public isCartNotEmpty(): boolean {
@@ -23,7 +23,6 @@ export class CartComponent implements OnInit {
   }
 
   public deleteItem(productID: number): void {
-    console.log('worksss')
     this.cartService.deleteItem(productID.valueOf());
     this.cartItems = this.cartService.getCartItems();
   }
