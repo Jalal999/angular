@@ -25,5 +25,11 @@ export class CartComponent implements OnInit {
   public deleteItem(productID: number): void {
     this.cartService.deleteItem(productID.valueOf());
     this.cartItems = this.cartService.getCartItems();
+    this.totalCost = this.cartService.getTotalCost();
+  }
+
+  public updateCart(productId: number, productCount: number): void {
+    this.cartService.updateCart(productId, productCount);
+    this.totalCost = this.cartService.getTotalCost(); 
   }
 }
