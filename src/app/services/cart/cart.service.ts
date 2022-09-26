@@ -32,7 +32,6 @@ export class CartService {
 
     for (let i=0; i < this.cartItems!.length; i++) {
       if (Object.values(this.cartItems![i].productId)[0] === Object.values(product.id)[0]) {
-        console.log("Updated amount", Number(Object.values(this.cartItems![i].productCount)[0]) + Number(Object.values(product.amount)[0]))
         Object.values(this.cartItems[i].productCount)[0] = Number(Object.values(this.cartItems![i].productCount)[0]) + Number(Object.values(product.amount)[0]);
         productInCart = true;
         break;
@@ -40,8 +39,6 @@ export class CartService {
     }
 
     if (!productInCart) {
-      console.log('product count: ', product.amount)
-
       this.cartItems?.push({
         productId: product.id,
         productName: product.title,
@@ -71,7 +68,6 @@ export class CartService {
     this.cartItems!.forEach((element) => {
       this.totalCost += Object.values(element.productCount)[0]*Object.values(element.productPrice)[0];
     })
-    console.log(this.totalCost)
     return this.totalCost;
   }
 
