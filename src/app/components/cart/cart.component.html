@@ -1,15 +1,15 @@
 <div class="cart" *ngIf="isCartNotEmpty(); else emptyCart">
   <div *ngFor="let item of cartItems" class="cart__item">
-    <img src={{item.productImg.value.src}} class="cart__item--img" alt={{item.productImg.value.alt}}>
+    <img src={{item.productImg.src}} class="cart__item--img" alt={{item.productImg.alt}}>
     <div class="cart__item__heading">
       <div>
-        <h2 class="cart__item__heading--name">{{ item.productName.value }}</h2>
+        <h2 class="cart__item__heading--name">{{ item.productName }}</h2>
         <img (click)="deleteItem(item.productId)" class="close-icon" src="data/media/img/close-icon.svg" />
       </div>
       <form>
-        <h3 class="cart__item__heading--price">${{ item.productPrice.value }}</h3>
-        <input type="number" min="1" id="amount" name="amount" [(ngModel)]="item.productCount.value"
-          (ngModelChange)="updateCart(item.productId.value, item.productCount.value)">
+        <h3 class="cart__item__heading--price">${{ item.productPrice }}</h3>
+        <input type="number" min="1" id="amount" name="amount" [(ngModel)]="item.productCount"
+          (ngModelChange)="updateCart(item.productId, item.productCount)">
       </form>
     </div>
   </div>

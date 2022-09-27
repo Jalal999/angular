@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export interface CartItemType {
   productId: number,
   productName: string,
-  productPrice: number, 
+  productPrice: number,
   productDescription: string,
   productImg?: string,
   productCount: number
@@ -30,23 +30,46 @@ export class CartService {
   public addToCart(product: ProductType): void {
     let productInCart = false;
 
-    for (let i=0; i < this.cartItems!.length; i++) {
-      if (Object.values(this.cartItems![i].productId)[0] === Object.values(product.id)[0]) {
-        Object.values(this.cartItems[i].productCount)[0] = Number(Object.values(this.cartItems![i].productCount)[0]) + Number(Object.values(product.amount)[0]);
+    for (let i = 0; i < this.cartItems!.length; i++) {
+      if (this.cartItems![i].productId === Object.values(product.id)[0]) {
+        this.cartItems[i].productCount += Object.values(product.amount)[0];
         productInCart = true;
         break;
       }
     }
 
     if (!productInCart) {
-      this.cartItems?.push({
-        productId: product.id,
-        productName: product.title,
-        productPrice: product.price,
-        productDescription: product.description!,
-        productImg: product.image,
-        productCount: product.amount
-      });
+      if (isNaN(Object.values(product.amount)[0]) ||
+        Object.values(product.amount)[0] === 0 ||
+        Object.values(product.amount)[0] === null) {
+        this.cartItems?.push({
+          productId: Object.values(product.id)[0],
+          productName: Object.values(product.title)[0],
+          productPrice: Object.values(product.price)[0],
+          productDescription: Object.values(product.description)[0],
+          productImg: Object.values(product.image)[0],
+          productCount: 1
+        });
+      } else if (Object.values(product.amount)[0] > 10) {
+        this.cartItems?.push({
+          productId: Object.values(product.id)[0],
+          productName: Object.values(product.title)[0],
+          productPrice: Object.values(product.price)[0],
+          productDescription: Object.values(product.description)[0],
+          productImg: Object.values(product.image)[0],
+          productCount: 10
+        });
+      }
+      else {
+        this.cartItems?.push({
+          productId: Object.values(product.id)[0],
+          productName: Object.values(product.title)[0],
+          productPrice: Object.values(product.price)[0],
+          productDescription: Object.values(product.description)[0],
+          productImg: Object.values(product.image)[0],
+          productCount: Object.values(product.amount)[0]
+        });
+      }
     }
   }
 
@@ -57,16 +80,16 @@ export class CartService {
   public deleteItem(id: number): void {
     this.cartItems = this.cartItems.filter(item => item.productId !== id)
     this.cartItems!.forEach((element, index) => {
-      if(element.productId === id) {
+      if (element.productId === id) {
         this.cartItems!.splice(index, 1);
       }
-    }); 
+    });
   }
 
   public getTotalCost(): number {
     this.totalCost = 0;
     this.cartItems!.forEach((element) => {
-      this.totalCost += Object.values(element.productCount)[0]*Object.values(element.productPrice)[0];
+      this.totalCost += element.productCount * element.productPrice;
     })
     return this.totalCost;
   }

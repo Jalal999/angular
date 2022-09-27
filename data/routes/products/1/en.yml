@@ -28,4 +28,4 @@ placeholders:
           alt: Java Book
         description: Java is one of the most useful programming languages.
         price: 20
-        amount: 0
+        amount: 1

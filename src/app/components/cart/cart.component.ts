@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
+    console.log(this.cartItems);
   }
 
   public isCartNotEmpty(): boolean {
