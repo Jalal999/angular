@@ -21,9 +21,11 @@ placeholders:
           alt: Back arrow icon
     - componentName: Product
       fields:
+        id: 2
         title: React
         image: 
           src: data/media/img/book_image_3.jpg
           alt: React.js Book
         description: React.js is one of the most powerfull frameworks of JavaScript.
-        amount: 0
+        price: 20
+        amount: 1

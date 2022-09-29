@@ -9,9 +9,11 @@ export default function product(manifest: Manifest) {
     name: 'Product',
     icon: SitecoreIcon.DocumentTag,
     fields: [
+      { name: 'id', type: CommonFieldTypes.Number },
       { name: 'title', type: CommonFieldTypes.SingleLineText },
       { name: 'image', type: CommonFieldTypes.Image },
       { name: 'description', type: CommonFieldTypes.MultiLineText },
+      { name: 'price', type: CommonFieldTypes.Number },
       { name: 'amount', type: CommonFieldTypes.SingleLineText },
 
     ],

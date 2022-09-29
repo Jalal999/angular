@@ -21,9 +21,11 @@ placeholders:
           alt: Back arrow icon
     - componentName: Product
       fields:
+        id: 1
         title: Java
         image: 
           src: data/media/img/book_image_2.jpg
           alt: Java Book
         description: Java is one of the most useful programming languages.
-        amount: 0
+        price: 20
+        amount: 1
