@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 // import { StyleguideSpecimenComponent } from './shared/styleguide-specimen/styleguide-specimen.component';
@@ -19,13 +19,15 @@ import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
     TranslateModule,
     RouterModule,
     JssModule,
-    FormsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
     TranslateModule,
     RouterModule,
-    FormsModule,
+    ReactiveFormsModule,
+    FormsModule
     // StyleguideSpecimenComponent
   ],
   declarations: [
