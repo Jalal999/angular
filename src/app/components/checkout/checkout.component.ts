@@ -3,6 +3,8 @@ import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 import { CartItemType } from '../../services/cart/cart.service';
 import { CartService } from '../../services/cart/cart.service';
 import { FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { ThankDialogComponent } from '../thank-dialog/thank-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-checkout',
@@ -14,8 +16,9 @@ export class CheckoutComponent implements OnInit {
   public items: CartItemType[];
   public totalCost: number;
   private emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]+$/;
+  public showDialog: boolean = false;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, public thankDialog: MatDialog) { }
 
   ngOnInit() {
     // remove this after implementation is done
@@ -46,5 +49,10 @@ export class CheckoutComponent implements OnInit {
       this.checkoutForm.controls['nameSurname'].hasError(errorKey)) {
         return true;
     } else return false;
+  }
+
+  onSubmit() {
+    this.thankDialog.open(ThankDialogComponent);
+    this.cartService.cleanCart();
   }
 }

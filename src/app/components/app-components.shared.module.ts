@@ -5,6 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 // import { StyleguideSpecimenComponent } from './shared/styleguide-specimen/styleguide-specimen.component';
 import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDialogModule } from '@angular/material/dialog';
 
 /*
   This module is imported by the generated app-components.module.ts.
@@ -20,14 +22,18 @@ import { JssModule } from '@sitecore-jss/sitecore-jss-angular';
     RouterModule,
     JssModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,
     TranslateModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule,
+    MatDialogModule
     // StyleguideSpecimenComponent
   ],
   declarations: [
