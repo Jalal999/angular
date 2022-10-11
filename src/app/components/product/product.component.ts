@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ComponentRendering } from '@sitecore-jss/sitecore-jss-angular';
 import { CartService } from '../../services/cart/cart.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
 
 export interface Product {
   id: number;
@@ -20,14 +22,11 @@ export class ProductComponent {
   @Input() rendering: ComponentRendering;
   public showDialog: boolean = false;
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, public dialog: MatDialog) { }
 
   public addToCart(product: Product): void {
     this.cartService.addToCart(product);
-    this.showDialog = true;
+    this.dialog.open(ProductDialogComponent);
   }
 
-  public closeDialog(): void {
-    this.showDialog = false;
-  }
 }
