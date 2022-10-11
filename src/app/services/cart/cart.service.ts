@@ -101,4 +101,8 @@ export class CartService {
       }
     })
   }
+
+  public cleanCart(): void {
+    this.cartItems = [];
+  }
 }

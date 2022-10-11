@@ -1,0 +1,36 @@
+<div class="checkout">
+  <div *ngFor="let item of items" class="checkout__item">
+    <div class="checkout__item__heading">
+      <img  src={{item.productImg.src}} alt={{item.productImg.alt}} class="checkout__item--img">
+      <h2>{{ item.productName }}</h2>
+    </div>
+    <h2 class="checkout__item__price">${{ item.productPrice }}</h2>
+  </div>
+  <div class="checkout__total">
+    <span>Total cost: </span>
+    <h2>${{ totalCost }}</h2>
+  </div>
+  <hr>
+
+  <form [formGroup]="checkoutForm"  class="checkout__form">
+    <div class="checkout__form__field">
+        <span>email:</span>
+        <input type="text" formControlName="email" required>
+    </div>
+    <p class="checkout__form__err-msg" *ngIf="hasError('pattern')">Your email is not valid!</p>
+
+    <div class="checkout__form__field">
+        <span>confirm email:</span>
+        <input type="text" formControlName="confirmEmail" required>
+    </div>
+    <p class="checkout__form__err-msg" *ngIf="hasError('mismatch')">Emails do NOT match!!</p>
+
+    <div class="checkout__form__field">
+        <span>name/surname:</span>
+        <input type="text" formControlName="nameSurname" required>
+    </div>
+    <p class="checkout__form__err-msg" *ngIf="hasError('pattern')">Put valid name and surname (at least two words)!!!</p>
+
+    <button class="checkout__form__btn" type="submit" (click)="onSubmit()" [disabled]="!checkoutForm.valid">Order</button>
+</form>
+</div>
