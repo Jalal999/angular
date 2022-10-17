@@ -29,7 +29,7 @@
         <span>name/surname:</span>
         <input type="text" formControlName="nameSurname" required>
     </div>
-    <p class="checkout__form__err-msg" *ngIf="hasError('pattern')">Put valid name and surname (at least two words)!!!</p>
+    <p class="checkout__form__err-msg" *ngIf="isNameValid()">Put valid name and surname (at least two words)!!!</p>
 
     <button class="checkout__form__btn" type="submit" (click)="onSubmit()" [disabled]="!checkoutForm.valid">Order</button>
 </form>

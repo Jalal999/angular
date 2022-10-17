@@ -60,7 +60,7 @@
 }
 
 .checkout__form__err-msg {
-    color: rgb(235, 10, 10);
+    color: #ca0000;
     font-size: 14px;
     font-weight: 500;
 } 

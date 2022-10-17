@@ -16,7 +16,7 @@ export class CheckoutComponent implements OnInit {
   public items: CartItemType[];
   public totalCost: number;
   private emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]+$/;
-  public showDialog: boolean = false;
+  public nameIsValid: boolean = false;
 
   constructor(private cartService: CartService, public thankDialog: MatDialog) { }
 
@@ -45,10 +45,15 @@ export class CheckoutComponent implements OnInit {
 
   public hasError(errorKey: string): boolean {
     if (this.checkoutForm.controls['email'].hasError(errorKey) ||
-      this.checkoutForm.controls['confirmEmail'].hasError(errorKey) ||
-      this.checkoutForm.controls['nameSurname'].hasError(errorKey)) {
-        return true;
+      this.checkoutForm.controls['confirmEmail'].hasError(errorKey)) {
+      return true;
+    } else if (this.checkoutForm.controls['nameSurname'].hasError(errorKey)) {
+      this.nameIsValid = true;
     } else return false;
+  }
+
+  public isNameValid(): boolean {
+    return this.nameIsValid;
   }
 
   onSubmit() {
