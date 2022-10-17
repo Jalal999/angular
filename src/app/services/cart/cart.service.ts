@@ -40,7 +40,7 @@ export class CartService {
 
     if (!productInCart) {
       if (isNaN(Object.values(product.amount)[0]) ||
-        Object.values(product.amount)[0] === 0 ||
+        Object.values(product.amount)[0] <= 0 ||
         Object.values(product.amount)[0] === null) {
         this.cartItems?.push({
           productId: Object.values(product.id)[0],
